@@ -1,0 +1,7 @@
+{
+    "name": "package-b",
+    "version": "1.0.0",
+    "devDependencies": {
+        "package-a": "^1.0.0"
+    }
+}

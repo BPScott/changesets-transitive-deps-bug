@@ -1,0 +1,13 @@
+{
+  "name": "changesets-transitive-deps-bug",
+  "private": true,
+  "workspaces": [
+    "package-a",
+    "package-b",
+    "package-c"
+  ],
+  "scripts": {"changeset": "changeset"},
+  "devDependencies": {
+    "@changesets/cli": "^2.24.4"
+  }
+}

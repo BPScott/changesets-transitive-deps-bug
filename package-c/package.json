@@ -1,0 +1,7 @@
+{
+    "name": "package-c",
+    "version": "1.0.0",
+    "dependencies": {
+        "package-b": "^1.0.0"
+    }
+}
