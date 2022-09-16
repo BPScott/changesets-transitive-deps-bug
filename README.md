@@ -1,6 +1,6 @@
 ### Changesets `updateInternalDependents` bug
 
-This repository showcases a bug with changesets `updateInternalDependents` behaviour around updating `devDependencies`. It is currently updating the package version of packages that have dependencies upon packages that devDependencies upon packages that have changed, when it should not be making these updates.
+This repository showcases a bug with changesets `updateInternalDependents` behaviour around updating `devDependencies`. It is currently updating the package version of packages that have dependencies upon packages that have devDependencies upon packages that have changed, when it should not be making these updates.
 
 This repository has 3 packages:
 
@@ -16,7 +16,7 @@ This repository has 3 packages:
 When running `npm run changset version`, I would expect changsets to:
 
 - Update `package-a`: Increase the version in the package.json and generate a CHANGELOG entry, as there is a changeset associated with this package
-- Update `package-b: Update the devDependency version of package-a to the new version i the package.json. The version of `package-b` should be untouched as only a devDependency changed. No CHANGELOG entry is created as the version does not change.
+- Update `package-b`: Update the devDependency version of package-a to the new version i the package.json. The version of `package-b` should be untouched as only a devDependency changed. No CHANGELOG entry is created as the version does not change.
 - Not touch `package-c`'s package.json. Because package-b's version was not updated there should be no change to `package-c`'s package.json or CHANGELOG.
 
 ### Actual Behaviour
